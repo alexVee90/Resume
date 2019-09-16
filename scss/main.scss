@@ -233,7 +233,7 @@ img {
     }
     
     #map { 
-      animation: mapUp 2s ease-in forwards;
+      animation: mapUp 2s ease-in 0.5s forwards;
       width: 100%;
     }
   }
