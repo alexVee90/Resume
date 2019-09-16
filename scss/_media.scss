@@ -7,6 +7,10 @@
       padding-top: 5rem;
     }
   }
+
+  .items { 
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
@@ -113,8 +117,8 @@
     }
 
     &-c {
-      h1 {
-        font-size: 2rem;
+      #map { 
+        height: 50px;
       }
     }
   }

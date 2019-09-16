@@ -1,6 +1,7 @@
 // imports
 @import "config";
 @import "utilities";
+@import "item_grid";
 
 // general styles
 * {
@@ -37,7 +38,7 @@ img {
 #logo {
   width: 140px;
   height: 50px;
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 //main-nav
@@ -147,6 +148,7 @@ img {
 
   &-c {
     .process {
+      box-sizing: border-box;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1.5rem;
@@ -157,18 +159,23 @@ img {
         top: 0;
         right: 0;
         font-size: 28px;
-        background: $main-color;
+        background: #ffbc00;
         border-radius: 50%;
         height: 15px;
         width: 15px;
         line-height: 15px;
         padding: 1rem;
         transition: all 1s;
+
+        #mongo { 
+          position: absolute;
+          right: 8px;
+        }        
       }
 
       &-icon {
         position: relative;
-        border-radius: 50%;
+        border-radius: 100%;
         background: $dark-color;
         color: set-text-color($dark-color);
         padding: 2rem;
@@ -190,6 +197,12 @@ img {
         }
       }
     }
+    #angular { 
+      span { 
+        position: absolute;
+        right: 11.5px;
+      }
+    }
   }
 }
 
@@ -199,9 +212,29 @@ img {
   &-b {
     .contact-info {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      text-align: center;
-      
+      grid-template-columns: repeat(2, 1fr);
+
+      a { 
+        color: #fff;
+      }
+    }
+    background: linear-gradient(to bottom, #ffbc00, #333)
+  }
+
+  &-c { 
+
+    @keyframes mapUp {
+      from { 
+      height: 0;
+      }
+      to { 
+       height: 400px;
+      }
+    }
+    
+    #map { 
+      animation: mapUp 2s ease-in forwards;
+      width: 100%;
     }
   }
 
